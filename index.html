@@ -1,5 +1,50 @@
 <html>
-  <body>
-    <p>Hello github</p>
-  </body>
+<head>
+<title>
+  programming guides for programmers
+</title>
+</head>
+<body>
+    <h2>cheat sheet for problems solved during coding </h2>
+    <h3>
+             1.GitHub Error message
+                 git push -u origin master
+             Permission denied (publickey).
+          fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.
+   </h3>
+   <p>Solutions</p>
+      <p> permission issues with ssh key</p>
+       <ol>
+       <li>
+             Paste the text below, substituting in your GitHub email address.
+            Open Git Bash
+      <li>
+           $ ssh-keygen -t ed25519 -C "your_email@example.com"
+                Enter a file in which to save the key (/c/Users/YOU/.ssh/id_ALGORITHM):[Press enter]
+                Enter passphrase (empty for no passphrase): [Type a passphrase]
+                Enter same passphrase again: [Type passphrase again]
+       <li>
+              # start the ssh-agent in the background
+           $ eval "$(ssh-agent -s)"
+            Agent pid 59566
+        </li>
+        <li>
+            $ ssh-add ~/.ssh/id_ed25519
+        </li>
+        <li> copy the ssh public key to your clipboard
+		    $ clip < ~/.ssh/id_ed25519.pub
+       </li>
+	   <li>
+	       click github profile settings->go to SSH and GPG keys
+	   </li>
+	   <li>
+	        Click New SSH key or Add SSH key.
+	   </li>
+	     <li>
+		    Title->give name
+			Key->paste your key
+			Click add SSH key
+		 </li>
+       </ol>
+</body>
 </html>
