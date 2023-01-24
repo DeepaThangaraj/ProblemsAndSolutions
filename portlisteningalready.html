@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>
+  tomcat server error
+</title>
+</head>
+<body>
+<p>
+
+<h2>how to remove port 8080 running already.couldnot start the process while running a spring boot application in STS,Eclipse
+</h2>
+go to cmd
+<br/>
+type 
+<br/>
+C:\WINDOWS\system32>netstat -aon | find /i "listening"
+<br/>
+hit enter
+<br/>
+apply the port filter
+<br/>
+type
+<br/>
+C:\WINDOWS\system32>netstat -aon |find /i "listening" |find "8080"
+<br/>
+hit enter
+<br/>
+note the PID
+<br/>
+type
+<br/>
+C:\WINDOWS\system32>taskkill /F /PID 4956
+
+
+</p>
+</body>
+
+</html>
